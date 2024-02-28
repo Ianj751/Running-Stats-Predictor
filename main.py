@@ -7,11 +7,11 @@ from math import sqrt
 
 running_data = pd.read_csv('raw-data-kaggle.csv', sep=';')
 
-#variable to predict/dependent variable/Prediction target
+#Target
 Y = running_data.ElapsedTime
-#Features/ Independent Variable
+#Features
 running_data_features = ['Distance','ElevationGain', 'AverageHeartRate'] 
-#not including gender, missing values not imputable. heart rate improves error somehow??
+#not including gender, missing values not imputable
 #both distance and elevation gain have a pearsonr of about .20
 X = running_data[running_data_features]
 
